@@ -3,22 +3,39 @@
 
 }
 
-.bg-image-2 {
+.bg-image-2,.bg-image-3,.bg-image-4,.bg-image-5,.bg-image-6 {
   background-image: url(img/Mossi-3-1.jpg);
 
 }
 
-.bg-image-3 {
+.bg-image-7 {
   background-image: url(img/323289207_913082583026233_4779125714751707435_n.jpg);
 
 }
 
- 
 
 .carousel-caption {
 
   font-weight: bolder;
 
+}
+
+.dropdown-menu {
+  column-count: 2; 
+  column-gap: 0; 
+}
+
+.dropdown-menu .dropdown-item {
+  display: block;
+  width: auto; 
+}
+@media (max-width: 768px) {
+  .dropdown-menu {
+    column-count: 1; 
+  }
+  .dropdown-menu .dropdown-item {
+    width: 100%; 
+  }
 }
 
 .card>img:hover {
@@ -50,8 +67,13 @@ body {
   
 }
 
+.indexmodalbutton button{
+  padding: 20px;
+}
 
-
+.indexmodalbutton i{
+  font-size: 1.6rem;
+}
 
 
 .hizmet-card>a:hover {
@@ -113,4 +135,16 @@ a.dropdown-item:hover {
 #navbarNavDropdown.show #navbar-nav {
   background: #999999;
   padding: 12px;
+}
+
+#carousel-image{
+  height: 80vh; 
+  max-height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #carousel-image{
+    height: 40vh; 
+    max-height: 100%;
+  }
 }
