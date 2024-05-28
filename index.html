@@ -1,227 +1,535 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Archen Shading | İletişim</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archen Shading</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Raleway:wght@300&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .navbar {
-      background-color: #d3d3d3;
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .navbar-brand {
-      color: #333;
-      font-size: 24px;
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-brand img {
-      margin-right: 10px;
-    }
-
-    .navbar-nav .nav-item {
-      margin: 0 10px;
-
-    }
-
-    .navbar-nav .nav-link {
-      color: #333;
-      position: relative;
-      transition: color 0.3s;
-      pointer-events: auto;
-
-
-    }
-
-    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    .navbar-nav .nav-link::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -2px;
-      background-color: #d9534f;
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-
-    .navbar-nav .nav-link:hover::before,
-    .navbar-nav .nav-item.dropdown.show .nav-link::before {
-      transform: scaleX(1);
-    }
-
-    .navbar-toggler {
-      border: none;
-    }
-
-    .navbar-nav .nav-item.dropdown .dropdown-menu {
-      display: none;
-    }
-
-    .navbar-nav .nav-link.dropdown-toggle:hover {
-      background-color: transparent;
-    }
-
-    .navbar-nav .nav-link.dropdown-toggle:focus {
-      background-color: transparent;
-    }
-
-    a {
-      color: #000;
-    }
-  </style>
-
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="img/logo.jpg" alt="" width="50" height="48" class="d-inline-block align-text-top">
-        Archen Shading
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="urunler.html" id="navbarDropdownMenuLink" role="button"
-              aria-haspopup="true" aria-expanded="false">
-              Ürünler
-            </a>
-            <div class="dropdown-menu row" aria-labelledby="navbarDropdownMenuLink">
-              <div class="col">
-                <a class="dropdown-item" href="urunler.html#one">Bioklimatik</a>
-                <a class="dropdown-item" href="urunler.html#two">Pergola</a>
-                <a class="dropdown-item" href="urunler.html#tree">Cam Tavan</a>
-                <a class="dropdown-item" href="urunler.html#four">Havuz Kapama</a>
-              </div>
-              <div class="col">
-                <a class="dropdown-item" href="urunler.html#five">Motorlu Perde Sistemleri</a>
-                <a class="dropdown-item" href="urunler.html#six">Giyotin Cam Sistemleri</a>
-                <a class="dropdown-item" href="urunler.html#seven">Cam Balkon Sistemleri</a>
-                <a class="dropdown-item" href="urunler.html#eight">Ekstra Ürünler</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="projelerimiz.html">Projelerimiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="hakkimizda.html">Hakkımızda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">İletişim</a>
-          </li>
-        </ul>
+  <nav class="navbar fixed-top">
+    <div id="mainNavigation">
+      <div class="navbar-expand-lg">
+        <div class="navbar-dark text-center my-2">
+          <button class="navbar-toggler w-75" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            <span class="align-middle">Menu</span>
+          </button>
+        </div>
+        <div class="text-center mt-3 collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto mt-3" id="navbar-nav">
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link active text-white text-uppercase" aria-current="page" href="#">Ana Sayfa</a>
+            </li>
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link" href="urunler.html">Ürünler</a>
+            </li>
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link" href="projelerimiz.html">Projelerimiz</a>
+            </li>
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+            </li>
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
-
-
-  <section class="p-5 text-center iletisim">
-    <div class="container">
-      <h2 class="mb-5 mt-3 font-weight-bold"><i class="fa-solid fa-address-card"></i> İletişim</h2>
-      <hr>
-
-      <div class="row">
-        <div class="col-lg-8">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14425.080657115623!2d29.1597043281404!3d41.010310539800784!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cacf3a0e5824cf%3A0x7228702d4fa3a42f!2zQVJDSEVOIE3EsE1BUkxJSyBEQU5JxZ5NQU5MSUsgU0FOLiBUxLBDLiBMVEQuIMWeVMSwLg!5e0!3m2!1str!2str!4v1692710205431!5m2!1str!2str"
-            width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
-
-
-        <div class="col">
-          <h3>İletişim Bilgileri</h3>
-
-          <hr>
-
-          <p><a href="https://www.instagram.com/archenshading/" target="_blank"><i class="fa-brands fa-instagram"></i>
-              @archenshading</a></p>
-
-          <p><a href="https://www.facebook.com/archenshading/" target="_blank"><i class="fa-brands fa-facebook"></i>
-              @archenshading</a></p>
-
-          <p><a href="https://wa.me/905050288836?text=Merhaba,%20web%20sitenizden%20ulaşıyorum%20" target="_blank"><i
-                class="fa-brands fa-whatsapp"></i> Whatsapp Üzerinden İletişime Geç</a>
-          </p>
-
-          <p><i class="fa-solid fa-phone"></i> <a href="#">Telefon Numarası : 05050288836 </a></p>
-
-          <p><i class="fa-solid fa-location-dot"></i> Adres : Yukarı Dudullu Mahallesi Modoko Mobilyacılar
-            Sites, 3.
-            Cd.
-            NO:294, 34775 Ümraniye/İstanbul
-          </p>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+        aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+        aria-label="Slide 7"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-image bg-image-1 active">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              bioklimatik sistemler
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              bioklimatik sistemler
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal1" type="button">DAHA
+              FAZLA</a>
+          </div>
         </div>
       </div>
 
-
-    </div>
-
-  </section>
-  <section class="text-center iletisim-form mt-2">
-    <div class="container ml-5 d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-6 p-3">
-        <h2 class="mt-3 font-weight-bold">İletişim Formu</h2>
-        <form id="contact-form">
-          <div class="mb-3">
-            <label for="name" class="form-label">Adınız : </label>
-            <input type="text" class="form-control" id="name" name="from_name" placeholder="Adınızı girin"
-              style="background-color: #c0c0c0;">
+      <div class="carousel-item carousel-image bg-image-2">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              Pergola sistemleri
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              Pergola sistemleri
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal2" type="button">DAHA
+              FAZLA</a>
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Mail Adresiniz :</label>
-            <input type="email" class="form-control" id="email" name="from_email" placeholder="Mail adresinizi girin"
-              style="background-color: #c0c0c0;">
+        </div>
+      </div>
+      <div class="carousel-item carousel-image bg-image-3">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              cam tavan sistemleri
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              cam tavan sistemleri
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal3" type="button">DAHA
+              FAZLA</a>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Mesajınız : </label>
-            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Mesajınızı girin"
-              style="background-color: #c0c0c0;"></textarea>
+        </div>
+      </div>
+      <div class="carousel-item carousel-image bg-image-4">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              havuz kapama sistemi
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              havuz kapama sistemi
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal4" type="button">DAHA
+              FAZLA</a>
           </div>
-          <button class="btn btn-dark" type="submit">Gönder</button>
-        </form>
+        </div>
+      </div>
+      <div class="carousel-item carousel-image bg-image-5">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              motorlu perde sistemleri
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              motorlu perde sistemleri
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal5" type="button">DAHA
+              FAZLA</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item carousel-image bg-image-6">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              giyotin cam sistemleri
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              giyotin cam sistemleri
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal6" type="button">DAHA
+              FAZLA</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item carousel-image bg-image-7">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="mb-3 text-uppercase" style="font-weight: 800">
+              cam balkon sistemleri
+            </h1>
+            <h5 class="mb-4 text-uppercase" style="font-weight: 800">
+              cam balkon sistemleri
+            </h5>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" rel="nofollow" target="_blank"
+              style="font-weight: 700" data-bs-toggle="modal" data-bs-target="#exampleModal7" type="button">DAHA
+              FAZLA</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="index.js"></script>
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header ">
+          <h1 class="modal-title fs-4 mt-2" id="exampleModalLabel" >
+            BİOKLİMATİK SİSTEMLER
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mt-3 mb-3">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
 
-
-
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+    tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+            BİOKLİMATİK RESİM GALERİSİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id="carousel-image" src="img/laguna.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img id="carousel-image" src="img/Mossi-3-1.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img id="carousel-image" src="img/Pergola-Sistemleri.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            PERGOLA SİSTEMLERİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body mt-3 mb-3">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            CAM TAVAN SİSTEMLERİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            HAVUZ KAPAMA SİSTEMİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            MOTORLU PERDE SİSTEMLERİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            GİYOTİN CAM SİSTEMLERİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            CAM BALKON SİSTEMLERİ
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Dış mekan yaşam alanlarının yeniden tanımlanması ile işlevselliğin
+            mükemmel birleşimi ... Exxen, geri katlanabilir özelliği ile dış
+            mekan yaşam alanlarının tam kapsamlı kullanımında önemli işlev
+            üstlenen yüksek teknolojili makaslı bioklimatik alüminyum pergola
+            sistemidir. Ürün geniş uygulama alanlarında tam koruma sağlayarak
+            daha konforlu zaman geçirilmesine olanak sunmak üzere
+            tasarlanmıştır. Sistem geniş uygulama seçeneklerine sahiptir ve
+            şık tasarımı ile restoran, teras, balkon gibi geniş uygulama
+            alanlarına özel çözümler barındırmaktadır
+          </p>
+          <div class="mb-4">
+            <ul>
+              <li>eksenel</li>
+              <li>biorolling</li>
+              <li>çift hareketli</li>
+              <li>rolling roof</li>
+            </ul>
+          </div>
+          <div class="indexmodalbutton mt-4 mb-5">
+            <a href="https://metaldolap.com.tr/uploads/site/katalog.pdf" target="_blank"><button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="İnformation"><i
+                  class="fa-solid fa-info"></i></button></a>
+            <button data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Deneme"><i class="fa-solid fa-eye"></i></button>
+            <button><i class="fa-solid fa-t"></i></button>
+            <button data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">
+              <i class="fa-regular fa-image"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script>
-
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl);
+          });
+      });
+  </script>
 </body>
 
 </html>
